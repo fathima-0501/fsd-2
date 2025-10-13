@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrow Function</title>
+</head>
+<body>
+
+  <button onclick="cheer()">Run Arrow Function</button>
+
+  <script>
+    // Arrow Function
+    const cheer = () => {
+      alert("You're amazing! (from Arrow Function)");
+    };
+  </script>
+
+</body>
+</html>
