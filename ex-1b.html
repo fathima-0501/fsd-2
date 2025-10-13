@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Element Selector Demo</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">Welcome to My Page</h1>
+  <p class="description">This is a paragraph with a class.</p>
+  <p>This is another paragraph.</p>
+  <button onclick="selectElements()">Click to Select Elements</button>
+  <script>
+    function selectElements() {
+      const title = document.getElementById("main-title");
+      title.style.color = "blue";
+      const descriptions = document.getElementsByClassName("description");
+      for (let desc of descriptions) {
+        desc.classList.add("highlight");
+      }
+      const paragraphs = document.getElementsByTagName("p");
+      paragraphs[1].style.fontWeight = "bold";
+      const firstPara = document.querySelector("p");
+      firstPara.style.fontStyle = "italic";
+      const allParas = document.querySelectorAll("p");
+      allParas.forEach((p, index) => {
+        p.textContent += ` (Paragraph ${index + 1})`;
+      });
+    }
+  </script>
+</body>
+</html>
