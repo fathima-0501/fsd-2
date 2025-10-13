@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Event Demo</title>
+  <style>
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Click the Buttons Below</h2>
+
+  <button id="btn1">Button 1</button>
+  <button id="btn2">Button 2</button>
+  <button id="btn3">Button 3</button>
+
+  <div id="message">Click a button to see the message.</div>
+
+  <script>
+    // Get reference to the message display element
+    const message = document.getElementById("message");
+
+    // Add click event listeners to each button
+    document.getElementById("btn1").addEventListener("click", function() {
+      message.textContent = "You clicked Button 1!";
+    });
+
+    document.getElementById("btn2").addEventListener("click", function() {
+      message.textContent = "You clicked Button 2!";
+    });
+
+    document.getElementById("btn3").addEventListener("click", function() {
+      message.textContent = "You clicked Button 3!";
+    });
+  </script>
+
+</body>
+</html>
